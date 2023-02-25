@@ -3,7 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import Header from './components/shared/Header/Header';
 import Productlist from './components/Productlist/Productlist';
-import Menu from './components/Menu';
+
 
 
 function App() {
@@ -23,7 +23,6 @@ function App() {
 
   return (
     <div className="App">
-      <Menu />
        <Header/>
         <Productlist products={products} deleteProduct={ deleteProduct } />
 
