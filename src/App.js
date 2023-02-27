@@ -1,10 +1,9 @@
 import { useState } from 'react';
-import logo from './logo.svg';
+/*import logo from './logo.svg';*/
 import './App.css';
 import Header from './components/shared/Header/Header';
 import Productlist from './components/Productlist/Productlist';
-import Menu from './components/Menu';
-
+import './Background.scss';
 
 function App() {
   
@@ -15,6 +14,7 @@ function App() {
     {id: 4, title: 'Product 4', price: 763},
     {id: 5, title: 'Product 5', price: 389}
   ]);
+  
 
   const deleteProduct = (productId) => {
     const newProduct = products.filter(product => product.id !== productId);
@@ -23,12 +23,16 @@ function App() {
 
   return (
     <div className="App">
-      <Menu />
+      <div className="background">
        <Header/>
         <Productlist products={products} deleteProduct={ deleteProduct } />
-
+      
+    </div>
     </div>
   );
 }
+
+ 
+
 
 export default App;

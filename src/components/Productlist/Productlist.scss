@@ -17,7 +17,7 @@ body {
   
   /* Header */
   .header {
-    background-color: #fff;
+    background-image: linear-gradient(to bottom right, #55ca06, #b3fd06, #2e1a8a);
     color: #000;
     display: flex;
     justify-content: center;
@@ -40,7 +40,7 @@ body {
   }
   
   .logo {
-    height: 40px;
+    height: 80px;
   }
   
   .nav {
