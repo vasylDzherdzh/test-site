@@ -8,6 +8,7 @@ import { useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Home from './components/Home/Home';
 import Abaut from './components/Abaut us/Abaut';
+import Shop from './components/Shop/Shop';
 
 
 function App() {
@@ -38,8 +39,8 @@ useEffect(()=>{
        
        <Routes>
         <Route path="/" element={<Home/>}></Route> 
-        <Route path="/shop" element={<Productlist products={products} deleteProduct={deleteProduct} />}></Route>
-        <Route path='/Abaut' element={<Abaut/>}></Route>       
+        <Route path='/Abaut' element={<Abaut/>}></Route>   
+        <Route path='/Shop' element={<Shop/>}></Route>       
        </Routes>
        
 
