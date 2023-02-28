@@ -4,6 +4,11 @@ import './App.css';
 import Header from './components/shared/Header/Header';
 import Productlist from './components/Productlist/Productlist';
 import './Background.scss';
+import { useEffect } from 'react';
+import { Routes, Route } from 'react-router-dom';
+import Home from './components/Home/Home';
+import Abaut from './components/Abaut us/Abaut';
+
 
 function App() {
   
@@ -21,11 +26,25 @@ function App() {
     setProducts(newProduct);
   }
 
+useEffect(()=>{
+  console.log('Use Effect si running');
+},[])
+
   return (
     <div className="App">
       <div className="background">
        <Header/>
+
+       
+       <Routes>
+        <Route path="/" element={<Home/>}></Route> 
+        <Route path="/shop" element={<Productlist products={products} deleteProduct={deleteProduct} />}></Route>
+        <Route path='/Abaut' element={<Abaut/>}></Route>       
+       </Routes>
+       
+
         <Productlist products={products} deleteProduct={ deleteProduct } />
+        
       
     </div>
     </div>
