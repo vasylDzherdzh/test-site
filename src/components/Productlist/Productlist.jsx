@@ -11,7 +11,7 @@ const Productlist= () => {
     },[]);
 
     const fetchData = async() => {
-        const response = await fetch('http://localhost:8080/products');
+        const response = await fetch(`http://localhost:8080/products`);
         const data = await response.json();
         setProducts(data);
     }
@@ -20,7 +20,7 @@ const Productlist= () => {
         await fetch(`http://localhost:8080/products/${id}`,{
             method: "DELETE",
             headers: {
-                'content-Type' : 'application/json'
+                'Content-Type' : 'application/json'
             }
         });
         fetchData();
@@ -28,6 +28,7 @@ const Productlist= () => {
    
     return (
         <div>
+            <Link to="/add" className="button is-primary mt-5">Add New</Link>
            <table className="table is-striped is-fullwidth">
             <thead>
                 <tr>
