@@ -9,6 +9,7 @@ import { Routes, Route } from 'react-router-dom';
 import Home from './components/Home/Home';
 import Abaut from './components/Abaut us/Abaut';
 import Shop from './components/Shop/Shop';
+import AddProduct from './components/AddProduct/AddProduct';
 
 
 function App() {
@@ -40,7 +41,8 @@ useEffect(()=>{
        <Routes>
         <Route path="/" element={<Home/>}></Route> 
         <Route path='/Abaut' element={<Abaut/>}></Route>   
-        <Route path='/Shop' element={<Shop/>}></Route>       
+        <Route path='/Shop' element={<Shop/>}></Route>  
+        <Route path='/Add' element={<AddProduct/>}></Route>        
        </Routes>
        
 
