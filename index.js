@@ -9,8 +9,8 @@ try {
     await db.authenticate();
     console.log('Connected');
 }
-catch {
-    console.log('Connection error', Error);
+catch(error) {
+    console.log('Connection error', error);
 }
 app.use(cors());
 app.use(express.json());
